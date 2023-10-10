@@ -7,7 +7,7 @@ Date 2023/10/10
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>  //导入isdigit()函数
+#include <ctype.h>  
 #include <string.h> 
 #define NSYMS 20        /* maximum number of symbols */
 struct symtab {
@@ -149,8 +149,6 @@ void yyerror(const char* s) {
 	fprintf(stderr, "Parse error: %s\n", s);
 	exit(1);
 }
-// 符号表查找程序
-// 返回一个符号表的表项
 struct symtab* symlook(char *s){
     char *p;
     struct symtab *sp;
